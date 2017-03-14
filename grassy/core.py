@@ -1,2 +1,4 @@
+import parser
+
 def start():
-    print('This is Grassy')
+    blog = parser.BlogProcessor()
