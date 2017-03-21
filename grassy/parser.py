@@ -29,7 +29,9 @@ class BlogProcessor:
             loader=PackageLoader('grassy', os.path.join('..','templates'))
         )
         template = env.get_template('main.html')
-        print(template.render(posts=self.blogList))
+        # Pass the variables that must be accessible from all templates
+        # This includes the blog posts and content
+        rendered_template = template.render(posts=self.blogList)
 
 if __name__=="__main__":
     blog = BlogProcessor()
